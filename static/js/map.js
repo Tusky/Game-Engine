@@ -1,13 +1,10 @@
 var ge = ge || {};
 
 /**
- * Initialies the game map.
- * @param width The width of the map, 8 by default.
- * @param height The height of the map, 8 by default.
- * @suppress this.map
- *
+ * Generate an empty map with the given size.
+ * @param width The width of the map.
+ * @param height The height of the map.
  */
-
 generate_empty_map = function (width, height) {
     this.map = [];
     for(var i= 0; i < height; i++) {
@@ -19,6 +16,11 @@ generate_empty_map = function (width, height) {
     }
 };
 
+/**
+ * Initialies the game map.
+ * @param width The width of the map, 8 by default.
+ * @param height The height of the map, 8 by default.
+ */
 ge.game_map = function (width, height) {
     console.log('initialize map');
     this.height = height || 8;
@@ -44,5 +46,5 @@ ge.game_map.prototype.saveMap = function () {
  * @todo generate a map with random tiles.
  */
 ge.game_map.prototype.generateRandomMap = function () {
-    
+
 };
