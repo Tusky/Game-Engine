@@ -11,18 +11,21 @@
             overflow: hidden;
         }
     </style>
+    <script src="static/js/map.js"></script>
 </head>
 <body>
     <canvas width="800" height="640" id="canvas"></canvas>
 <script>
     var canvas;
+    var ge = ge || {};
     function run() {
         var x = document.getElementById('canvas');
         canvas = x.getContext('2d');
         canvas.canvas.width  = window.innerWidth;
         canvas.canvas.height = window.innerHeight;
     }
-
+    new ge.game_map();
+    new ge.game_map(2,2);
     window.addEventListener('load', run, false);
 
 </script>
