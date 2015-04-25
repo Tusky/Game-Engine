@@ -2,8 +2,8 @@ var ge = ge || {};
 
 /**
  * Generate an empty map with the given size.
- * @param width The width of the map.
- * @param height The height of the map.
+ * @param {number} width The width of the map.
+ * @param {number} height The height of the map.
  */
 generate_empty_map = function (width, height) {
     this.map = [];
@@ -18,8 +18,8 @@ generate_empty_map = function (width, height) {
 
 /**
  * Initialies the game map.
- * @param width The width of the map, 8 by default.
- * @param height The height of the map, 8 by default.
+ * @param {number} [width=8] The width of the map.
+ * @param {number} [height=8] The height of the map.
  */
 ge.game_map = function (width, height) {
     console.log('initialize map');
