@@ -1,50 +1,53 @@
 var ge = ge || {};
+var log = log || new ge.logger();
 
 /**
  * Generate an empty map with the given size.
  * @param {number} width The width of the map.
  * @param {number} height The height of the map.
+ * @return {string[]} The generated map.
  */
 generate_empty_map = function (width, height) {
-    this.map = [];
+    var map = [];
     for(var i= 0; i < height; i++) {
         var row = [];
         for(var j= 0; j < width; j++) {
             row.push('E');
         }
-        this.map.push(row);
+        map.push(row);
     }
+    return map
 };
 
 /**
- * Initialies the game map.
+ * Initializes the map system.
  * @param {number} [width=8] The width of the map.
  * @param {number} [height=8] The height of the map.
  */
-ge.game_map = function (width, height) {
-    console.log('initialize map');
+ge.map_system = function (width, height) {
+    log.write('Initializing map');
     this.height = height || 8;
     this.width = width || 8;
     this.map = generate_empty_map(this.width, this.height);
 };
 
-/***
+/**
  * @todo load a json string as a map.
  */
-ge.game_map.prototype.loadMap = function () {
+ge.map_system.prototype.loadMap = function () {
 
 };
 
-/***
+/**
  * @todo save a json string as a map.
  */
-ge.game_map.prototype.saveMap = function () {
+ge.map_system.prototype.saveMap = function () {
 
 };
 
-/***
+/**
  * @todo generate a map with random tiles.
  */
-ge.game_map.prototype.generateRandomMap = function () {
+ge.map_system.prototype.generateRandomMap = function () {
 
 };
