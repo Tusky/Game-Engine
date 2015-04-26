@@ -1,0 +1,37 @@
+[
+  [
+    "Grass",
+    true,
+    []
+  ],
+  [
+    "Rock",
+    false,
+    []
+  ],
+  [
+    "Sand",
+    true,
+    []
+  ],
+  [
+    "Water",
+    false,
+    []
+  ],
+  [
+    "Dirt",
+    true,
+    []
+  ],
+  [
+    "Forest",
+    false,
+    []
+  ],
+  [
+    "Flower",
+    true,
+    []
+  ]
+]
